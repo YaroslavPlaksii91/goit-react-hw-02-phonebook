@@ -25,6 +25,7 @@
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  transition: all ease 250ms;
 }
 
 .button:hover,

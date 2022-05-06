@@ -22,11 +22,10 @@ class App extends Component {
       number,
     };
 
-    const isInArray = this.state.contacts.find(
-      contact => contact.name === newContact.name,
+    const isInContacts = this.state.contacts.find(
+      ({ name }) => name === newContact.name,
     );
-
-    if (isInArray) return alert(`${name} is already in contacts`);
+    if (isInContacts) return alert(`${name} is already in contacts`);
 
     this.setState(({ contacts }) => ({
       contacts: [...contacts, newContact],
